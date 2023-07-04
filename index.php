@@ -36,7 +36,7 @@ require __DIR__ . "./function.php";
         <div class="row">
             <div class="col-12 d-flex justify-content-between">
                 <label for="passwordLength">Password length:</label>
-                <input type="number" name="passwordLength" id="passwordLength">
+                <input type="number" name="pswLength" id="pswLength">
             </div>
         </div>
         <button type="submit">Generate</button>
