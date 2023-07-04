@@ -6,9 +6,9 @@ Milestone 2
 -->
 
 <?php
+    $length = $_GET['passwordLength'];
     
-
-
+    function
 ?>
 
 <!DOCTYPE html>
