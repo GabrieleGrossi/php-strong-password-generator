@@ -1,6 +1,6 @@
 <?php
     $pswLength = $_GET["passwordLength"];
-    $charactersList = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789!£$%&/()^[]{}@#§";
+    $charactersList = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789!";
 
     function generatePsw($length, $characters) {
         $password= [];
