@@ -11,8 +11,21 @@ Milestone 2
 
     function generatePsw($length, $characters) {
         $password= [];
-        $availableChar= strlen($characters)
+        $availableChar= strlen($characters);
+
+        if(empty($length) || !is_numeric($length)){
+            return false;
+        }else{
+            for($i = 0; $i < $length; $i++){
+                $randomNumber = rand(0, $availableChar);
+                
+                array_push($password, $characters[$randomNumber]);
+            }
+    
+            return implode($password);
+        }
     }
+    $generatedPassword = generatePsw($pswLength, $charactersList);
 ?>
 
 <!DOCTYPE html>
@@ -42,11 +55,15 @@ Milestone 2
         <div class="row">
             <div class="col-12 d-flex justify-content-between">
                 <label for="passwordLength">Password length:</label>
-                <input type="text" name="passwordLength" id="passwordLength">
+                <input type="number" name="passwordLength" id="passwordLength">
             </div>
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit">Generate</button>
     </form>
-    
+    <p class="text-center pb-5 pt-5">
+        <?php 
+            echo "La password generata è: " . $generatedPassword;
+        ?>
+    </p>
 </body>
 </html>
